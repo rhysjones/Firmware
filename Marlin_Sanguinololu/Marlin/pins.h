@@ -500,19 +500,12 @@
 
 #ifdef SANGUINOLOLU_V_1_2
 
-#define HEATER_BED_PIN     10 //12 // (bed)
+#define HEATER_BED_PIN     12 // (bed)
 #define X_ENABLE_PIN       14
 #define Y_ENABLE_PIN       14
 #define Z_ENABLE_PIN       26
 #define E0_ENABLE_PIN      14
 
-#else
-
-#define HEATER_BED_PIN       14  // (bed)
-#define X_ENABLE_PIN       -1
-#define Y_ENABLE_PIN       -1
-#define Z_ENABLE_PIN       -1
-#define E0_ENABLE_PIN       -1
 
 #endif
 

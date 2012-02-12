@@ -41,14 +41,14 @@
 // 3 is mendel-parts thermistor
 // 4 is 10k thermistor
 // 5 is ParCan supplied 104GT-2 100K
-// 6 is EPCOS 100k
-// 7 is 100k Honeywell thermistor 135-104LAG-J01
+// 6 is Extruder Thermistor
+// 7 is Bed Thermistor
 // 100 is 100k GE Sensing AL03006-58.2K-97-G1
 // 101 is 100k 0603 SMD Vishay NTCS0603E3104FXT
 
-#define THERMISTORHEATER_0 100
+#define THERMISTORHEATER_0 6
 //#define THERMISTORHEATER_1 6
-//#define THERMISTORHEATER_2 1
+//#define THERMISTORHEATER_2 7
 
 #define HEATER_0_USES_THERMISTOR
 //#define HEATER_1_USES_THERMISTOR
@@ -58,7 +58,7 @@
 //#define HEATER_2_USES_AD595
 
 // Select one of these only to define how the bed temp is read.
-#define THERMISTORBED 101
+#define THERMISTORBED 7
 #define BED_USES_THERMISTOR
 //#define BED_LIMIT_SWITCHING
 #ifdef BED_LIMIT_SWITCHING
@@ -223,7 +223,8 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 #define INVERT_E2_DIR true   // for direct drive extruder v9 set to true, for geared extruder set to false
 
 //// ENDSTOP SETTINGS:
-// Sets direction of endstops when homing; 1=MAX, -1=MIN
+// Sets direction of endstops when 
+; 1=MAX, -1=MIN
 #define X_HOME_DIR -1
 #define Y_HOME_DIR -1
 #define Z_HOME_DIR -1
@@ -237,7 +238,7 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
 #define HOMING_FEEDRATE {10*60, 10*60, 1*60, 0}  // set the homing speeds (mm/min)
-#define FAST_HOME_FEEDRATE {80*60, 80*60, 4*60, 0}  // set the homing speeds (mm/min)
+#define FAST_HOME_FEEDRATE {80*60, 80*60, 2*60, 0}  // set the homing speeds (mm/min)
 
 
 //homing hits the endstop, then retracts by this distance, before it tries to slowly bump again:
@@ -252,7 +253,7 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 
 // default settings 
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {91.4286, 91.4286,4000,875}
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {91.4286, 91.4286,4000,903}
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {78.7402,78.7402,200*8/3,760*1.1}                    // default steps per unit for ultimaker 
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {40, 40, 3333.92, 360} //sells mendel with v9 extruder
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.3232, 80.8900, 2284.7651, 757.2218} // SAE Prusa w/ Wade extruder

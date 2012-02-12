@@ -59,12 +59,12 @@ class Thermistor:
 
 def main(argv):
 
-    r0 = 10000;
+    r0 = 100000;
     t0 = 25;
-    beta = 3947;
-    r1 = 680;
-    r2 = 1600;
-    num_temps = int(20);
+    beta = 4036;
+    r1 = 0;
+    r2 = 4700;
+    num_temps = int(50);
     
     try:
         opts, args = getopt.getopt(argv, "h", ["help", "r0=", "t0=", "beta=", "r1=", "r2="])
